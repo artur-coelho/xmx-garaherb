@@ -145,6 +145,23 @@
     }
 }
 
+.section-testimonials {
+    padding: 40px 30px;
+
+    &__title {
+        margin-bottom: 2.5rem;
+    }
+
+    &__order-button {
+        margin: 1.5rem auto 0;
+    }
+}
+
+.grid-testimonials-cards {
+    display: grid;
+    gap: 1.25rem;
+}
+
 @media (min-width: 768px) {
     .section-hero {
         padding: 146px 16px 115px 16px;
@@ -219,6 +236,24 @@
             margin-left: auto;
         }
     }
+
+    .section-testimonials {
+        padding: 80px 16px 70px;
+
+        &__title {
+            max-width: 55.75rem;
+            margin-bottom: 4rem;
+        }
+
+        &__order-button {
+            margin: 2.5rem auto 0;
+        }
+    }
+
+    .grid-testimonials-cards {
+        gap: 1.5rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (min-width: 1024px) {
@@ -242,5 +277,10 @@
 
     .grid-ingredients-cards {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grid-testimonials-cards {
+        gap: 2rem;
+        grid-template-columns: repeat(4, 1fr);
     }
 }

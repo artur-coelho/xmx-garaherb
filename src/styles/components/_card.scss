@@ -214,6 +214,45 @@
     }
 }
 
+.testimonial-card {
+    border-radius: 20px;
+    background-color: $color-white;
+    box-shadow: 0px 4px 24px 0px #00000040;
+    overflow: hidden;
+
+    &__img {
+        width: 100%;
+        height: auto;
+        max-height: 30rem;
+        object-fit: cover;
+    }
+
+    &__text {
+        padding: 16px;
+        margin: 0;
+        color: $color-neutral-500;
+        font-size: 1rem;
+        font-style: italic;
+    }
+
+    &__author {
+        padding: 0 24px 24px;
+    }
+
+    &__author-name {
+        display: block;
+        padding-top: 16px;
+        border-top: 2px solid #0000001A;
+        font-weight: 600;
+        color: $color-black;
+    }
+
+    &__author-age {
+        color: $color-neutral-500;
+        margin: 0;
+    }
+}
+
 @media screen and (min-width: 1024px) {
     .buy-card {
         &--highlight {
