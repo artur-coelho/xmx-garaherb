@@ -185,15 +185,53 @@
     }
 }
 
-.section-delivery-offer__bot {
-    background-color: #0e0703;
-    padding: 24px;
+.section-offer {
+    &__headline {
+        background-color: #0e0703;
+        padding: 24px;
+    }
 
-    &-title {
+    &__title {
         color: $color-white;
         font-weight: 600;
         max-width: 1060px;
     }
+
+    &__content {
+        padding: 32px 20px;
+    }
+
+    &__customer-say {
+        text-align: center;
+        margin: 2rem auto 1.5rem;
+    }
+
+    &__customer-rate-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 0 0.5rem;
+    }
+
+    &__customer-rate {
+        font-weight: 600;
+        margin: 0;
+    }
+
+    &__customer-reviews-number {
+        margin: 0;
+    }
+}
+
+.satisfaction-card {
+    background: linear-gradient(
+        80.21deg,
+        #0b0b0b 0.53%,
+        #1a0d0c 54.96%,
+        #aa2315 99.6%
+    );
+    border-radius: 20px;
+    padding: 32px;
 }
 
 @media (min-width: 768px) {
@@ -291,7 +329,7 @@
 
     .section-delivery-offer__top {
         padding: 30px 16px;
-        
+
         &-container {
             display: flex;
             align-items: center;
@@ -302,8 +340,40 @@
         }
     }
 
-    .section-delivery-offer__bot {
-        padding: 40px 16px;
+    .section-offer {
+        &__headline {
+            padding: 40px 16px;
+        }
+
+        &__content {
+            padding: 92px 16px;
+        }
+
+        &__customer-say {
+            margin: 4rem auto 2.5rem;
+        }
+
+        &__customer-say-title {
+            font-size: 2rem;
+            font-weight: 500;
+            margin: 0 0 0.5rem;
+        }
+
+        & .vantages-list {
+            padding: 24px 0;
+            margin-bottom: 2.5rem;
+        }
+    }
+
+    .satisfaction-card {
+        display: flex;
+        align-items: center;
+
+        &__img {
+            width: 34%;
+            height: auto;
+            margin-right: 4rem;
+        }
     }
 }
 
@@ -333,5 +403,9 @@
     .grid-testimonials-cards {
         gap: 2rem;
         grid-template-columns: repeat(4, 1fr);
+    }
+
+    .satisfaction-card {
+        padding: 64px 120px 64px 90px;
     }
 }
