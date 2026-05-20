@@ -1,0 +1,51 @@
+@use '../abstracts/variables' as *;
+
+.order-button {
+    width: clamp(260px, 100%, 396px);
+    background: linear-gradient(
+        180deg,
+        $color-yellow-400 0%,
+        $color-yellow-600 100%
+    );
+    border: none;
+    border-radius: 3rem;
+    cursor: pointer;
+    padding: 18px 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    color: $color-neutral-1000;
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    box-shadow: 0 6px 0 0 $color-yellow-700;
+
+    transition-property: transform, box-shadow, filter;
+    transition-duration: 0.15s;
+    transition-timing-function: ease-out;
+
+    &:hover {
+        filter: brightness(1.1);
+        transform: translateY(-2px);
+        box-shadow:
+            0 8px 0 0 $color-yellow-700,
+            0 10px 20px rgba($color-yellow-600, 0.45);
+    }
+
+    &:active {
+        filter: brightness(0.95);
+        transform: translateY(4px);
+        box-shadow: 0 2px 0 0 $color-yellow-700;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .order-button {
+        font-size: 1.5rem;
+    }
+}

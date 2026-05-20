@@ -1,0 +1,66 @@
+@use '../abstracts/variables' as *;
+
+.section-hero {
+    padding: 440px 84px 80px 78px;
+    position: relative;
+
+    &__img-bg {
+        position: absolute;
+        inset: 0;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__text-container {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+.hero-list {
+    display: grid;
+    gap: 1.5rem;
+
+    color: $color-white;
+    font-weight: 500;
+    font-size: 1.125rem;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2.5rem;
+
+    & li {
+        display: flex;
+        align-items: center;
+        text-wrap: nowrap;
+
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 1.25rem;
+            height: 1.25rem;
+            margin-right: 0.5rem;
+            background-image: url('../../assets/vectors/green-tick.svg');
+            background-size: contain;
+            flex-shrink: 0;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .section-hero {
+        padding: 146px 16px 115px 16px;
+
+        &__text-container {
+            position: relative;
+            z-index: 1;
+            max-width: clamp(200px, 50%, 484px);
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+        .hero-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
