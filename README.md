@@ -2,6 +2,10 @@
 
 Landing page for GaraHerb, a natural vitality supplement for men. Built with Vite, SCSS, and Vanilla JavaScript.
 
+## Link to video explaining the project decisions
+https://youtu.be/17BXteD7gZ0
+
+
 ## Tech Stack
 
 - **Vite** 8 — build tool and development server
