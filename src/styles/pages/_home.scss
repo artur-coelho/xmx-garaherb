@@ -73,6 +73,20 @@
     }
 }
 
+.section-prices {
+    padding: 40px;
+
+    &__subtitle {
+        margin-bottom: 1.5rem;
+    }
+}
+
+.grid-buy-cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.25rem;
+}
+
 @media (min-width: 768px) {
     .section-hero {
         padding: 146px 16px 115px 16px;
@@ -97,7 +111,6 @@
             padding: 8px 32px;
             justify-content: center;
 
-
             &:not(:last-child) {
                 border-bottom: none;
                 border-right: 1px solid rgba(0, 0, 0, 0.2);
@@ -117,5 +130,19 @@
 @media (min-width: 1024px) {
     .hero-list {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+        .section-prices {
+        padding: 80px 16px;
+        background-color: #F5F5F5;
+
+        &__subtitle {
+            margin-bottom: 4.5rem;
+        }
+    }
+
+    .grid-buy-cards {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
     }
 }

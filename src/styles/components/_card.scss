@@ -1,0 +1,212 @@
+@use '../abstracts/variables' as *;
+
+.buy-card {
+    background-color: $color-white;
+    border: 1px solid rgba($color-neutral-950, 0.2);
+    border-radius: 1.25rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    &--highlight {
+        background-color: #fff1c0;
+        border: 1px solid #aa2315;
+    }
+
+    &__header {
+        background-color: $color-neutral-950;
+        padding: 6px;
+    }
+
+    &--highlight &__header {
+        background: linear-gradient(90deg, #ff4747 0%, #f6e323 100%);
+    }
+
+    &__header-text {
+        font-size: 1.25rem;
+        font-weight: 500;
+        color: $color-white;
+        text-align: center;
+        margin: 0;
+    }
+
+    &__body {
+        flex: 1;
+        padding: 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+
+        &-top {
+            flex: 1;
+        }
+    }
+
+    &__title {
+        color: $color-neutral-900;
+        font-size: 1.75rem;
+        font-weight: 700;
+        margin: 0 auto;
+    }
+
+    &__subtitle {
+        color: $color-neutral-500;
+        font-size: 1.25rem;
+        font-weight: 500;
+        margin: 0 auto 0.5rem;
+    }
+
+    &__img {
+        margin: 0;
+    }
+
+    &__price {
+        font-size: 3rem;
+        font-weight: 700;
+        margin: 0;
+
+        &-bottle {
+            font-size: 1rem;
+            font-weight: 400;
+            color: $color-neutral-500;
+        }
+    }
+
+    &__benefits-list {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 1rem;
+
+        &-item {
+            display: flex;
+            align-items: center;
+
+            &:not(:last-child) {
+                margin-bottom: 0.75rem;
+            }
+
+            &::before {
+                content: '';
+                display: inline-block;
+                width: 1.25rem;
+                height: 1.25rem;
+                margin-right: 0.625rem;
+                background-image: url('../../assets/vectors/green-tick.svg');
+                background-size: contain;
+                flex-shrink: 0;
+            }
+        }
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(
+            180deg,
+            $color-yellow-400 0%,
+            $color-yellow-400 50%,
+            $color-yellow-600 50%,
+            $color-yellow-600 100%
+        );
+        border: 4px solid $color-olive-700;
+        border-radius: 20px;
+        padding: 1rem;
+        width: clamp(300px, 100%, 314px);
+        cursor: pointer;
+
+        &-text {
+            display: inline-block;
+            font-size: 2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            transform: scaleY(2);
+            background-image: linear-gradient(
+                180deg,
+                $color-neutral-1000 0%,
+                #01194f 50%
+            );
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            margin: 0 1rem 0 0;
+        }
+
+        transition:
+            transform 0.15s ease,
+            box-shadow 0.15s ease,
+            filter 0.15s ease;
+
+        &:hover {
+            filter: brightness(1.08);
+            box-shadow: 0 6px 18px rgba($color-olive-700, 0.45);
+            transform: translateY(-2px);
+        }
+
+        &:active {
+            filter: brightness(0.92);
+            box-shadow: none;
+            transform: translateY(2px);
+        }
+    }
+
+    &__img-cards {
+        margin: 1rem auto;
+    }
+
+    &__discount {
+        font-size: 1.5rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #5e7885;
+
+        & del {
+            text-decoration: line-through;
+            text-decoration-color: red;
+        }
+
+        & b {
+            color: #014a71;
+            font-weight: 500;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .buy-card {
+        &--highlight {
+            transform: scaleY(1.04);
+            transform-origin: bottom;
+        }
+
+        &__header {
+            padding: 8px;
+        }
+
+        &__header-text {
+            font-size: 1.5rem;
+        }
+
+        &__body {
+            padding: 16px 28px 38px;
+        }
+
+        &__title {
+            font-size: 2.25rem;
+        }
+
+        &__subtitle {
+            font-size: 1.5rem;
+        }
+
+        &__price {
+            font-size: 4rem;
+
+            &-bottle {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}

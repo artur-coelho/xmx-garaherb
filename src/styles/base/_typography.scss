@@ -37,9 +37,25 @@
     margin: 0 0 1.5rem 0;
 
     & strong {
-      font-weight: 600;
-      color: $color-white;
+        font-weight: 600;
+        color: $color-white;
     }
+}
+
+.section-title {
+    font-size: 2rem;
+    color: $color-neutral-950;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.4;
+    margin: 0 auto;
+}
+
+.section-subtitle {
+    font-size: 1rem;
+    color: $color-neutral-500;
+    text-align: center;
+    margin: 0 auto;
 }
 
 @media screen and (min-width: 768px) {
@@ -48,6 +64,14 @@
     }
 
     .hero-subtitle {
+        font-size: 1.25rem;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    .section-subtitle {
         font-size: 1.25rem;
     }
 }
