@@ -234,6 +234,37 @@
     padding: 32px;
 }
 
+.section-faq {
+    background-color: $color-neutral-900;
+    padding: 40px 24px;
+
+    &__subtitle {
+        color: $color-yellow-700;
+        font-weight: 600;
+        text-align: center;
+        margin: 0 0 .75rem;
+    }
+
+    &__title {
+        color: $color-white;
+        margin: 0 0 2.5rem;
+    }
+}
+
+.faq-tabs-container {
+    max-width: 934px;
+    margin: 0 auto;
+
+    & .faq-item:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+}
+
+.packaging-label-img {
+    display: block;
+    margin: 2rem auto 0;
+}
+
 @media (min-width: 768px) {
     .section-hero {
         padding: 146px 16px 115px 16px;
@@ -374,6 +405,10 @@
             height: auto;
             margin-right: 4rem;
         }
+    }
+
+    .section-faq {
+        padding: 80px 16px;
     }
 }
 

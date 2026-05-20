@@ -1,0 +1,91 @@
+@use '../abstracts/variables' as *;
+
+.faq-item {
+    border-bottom: 1px solid $color-border;
+    background-color: $color-white;
+    border-radius: 8px;
+    overflow: hidden;
+
+    &:first-child {
+        border-top: 1px solid $color-border;
+    }
+
+    &__trigger {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        background: none;
+        border: none;
+        border-radius: 8px;
+        padding: 16px;
+        cursor: pointer;
+        text-align: left;
+        gap: 1rem;
+        color: $color-neutral-900;
+        font-size: 1.25rem;
+        font-weight: 600;
+        transition: color 0.2s ease;
+
+        &:hover {
+            color: $color-neutral-500;
+        }
+
+        &[aria-expanded='true'] {
+            color: $color-neutral-950;
+
+            .faq-item__icon::before {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    &__icon {
+        flex-shrink: 0;
+        width: 1.25rem;
+        height: 1.25rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &::before {
+            content: '';
+            display: block;
+            width: 0.6rem;
+            height: 0.6rem;
+            border-right: 2px solid currentColor;
+            border-bottom: 2px solid currentColor;
+            transform: rotate(45deg);
+            transition: transform 0.25s ease;
+            margin-top: -0.2rem;
+        }
+    }
+
+    &__body {
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.3s ease;
+    }
+
+    &__content {
+        padding: 16px;
+            padding-bottom: 1.5rem;
+        color: $color-neutral-500;
+        font-size: 0.9375rem;
+        line-height: 1.6;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .faq-item {
+        &__trigger {
+            font-size: 1.5rem;
+            padding: 16px;
+        }
+
+        &__content {
+            font-size: 1rem;
+            padding-bottom: 1.5rem;
+        }
+    }
+}
