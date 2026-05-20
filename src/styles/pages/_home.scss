@@ -4,14 +4,6 @@
     padding: 440px 84px 80px 78px;
     position: relative;
 
-    &__img-bg {
-        position: absolute;
-        inset: 0;
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-    }
-
     &__text-container {
         position: relative;
         z-index: 1;
@@ -91,14 +83,6 @@
     padding: 528px 84px 80px;
     position: relative;
 
-    &__img-bg {
-        position: absolute;
-        inset: 0;
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-    }
-
     &__text-container {
         position: relative;
         z-index: 1;
@@ -120,6 +104,45 @@
 .grid-ingredients-cards {
     display: grid;
     gap: 2rem;
+}
+
+.section-benefits {
+    position: relative;
+    padding: 80px 84px 524px;
+
+    &__text-container {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+.benefits-list {
+    color: $color-white;
+    font-weight: 500;
+    font-size: 1.125rem;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+
+    & li {
+        display: flex;
+        align-items: center;
+
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 1.25rem;
+            height: 1.25rem;
+            margin-right: 0.5rem;
+            background-image: url('../../assets/vectors/green-tick.svg');
+            background-size: contain;
+            flex-shrink: 0;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+    }
 }
 
 @media (min-width: 768px) {
@@ -165,8 +188,6 @@
         padding: 96px 16px 94px 16px;
 
         &__text-container {
-            position: relative;
-            z-index: 1;
             max-width: clamp(200px, 50%, 484px);
             margin-left: auto;
         }
@@ -187,6 +208,16 @@
 
     .grid-ingredients-cards {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section-benefits {
+        position: relative;
+        padding: 80px 16px;
+
+        &__text-container {
+            max-width: clamp(200px, 50%, 510px);
+            margin-left: auto;
+        }
     }
 }
 
