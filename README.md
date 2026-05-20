@@ -5,6 +5,8 @@ Landing page for GaraHerb, a natural vitality supplement for men. Built with Vit
 ## Link to video explaining the project decisions
 https://youtu.be/17BXteD7gZ0
 
+## Link to production website in github pages
+https://artur-coelho.github.io/xmx-garaherb/
 
 ## Tech Stack
 
