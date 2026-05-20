@@ -1,11 +1,78 @@
 @use '../abstracts/variables' as *;
 
-.page__footer {
-  border-top: 1px solid $color-border;
-  border-bottom: 0;
-}
-
 .page__main {
-  flex: 1;
+    flex: 1;
 }
 
+.footer__links-section {
+    background-color: $color-yellow-700;
+    padding: 20px 16px;
+}
+
+.footer__links-list {
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    &-item:not(:last-child) {
+        margin-bottom: 0.5rem;
+    }
+}
+
+.footer__link {
+    color: $color-text;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.footer__warning-section {
+    background-color: $color-neutral-950;
+    text-align: center;
+    padding: 20px 16px;
+
+    &-text {
+        color: $color-white;
+        margin: 0;
+    }
+}
+
+.footer__copyright-section {
+    text-align: center;
+    padding: 20px 16px;
+
+    &-text {
+      margin: 0 0 .5rem;
+      font-size: 1.125rem;
+      display: block;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .footer__links-section {
+        padding: 32px 16px;
+    }
+
+    .footer__links-list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+        &-item:not(:last-child) {
+            margin-bottom: 0;
+        }
+    }
+
+    .footer__warning-section {
+        padding: 32px 16px;
+    }
+
+    .footer__copyright-section {
+        padding: 32px 16px;
+    }
+}
