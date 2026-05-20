@@ -23,7 +23,7 @@
     text-decoration: none;
     text-transform: uppercase;
 
-    box-shadow: 0 6px 0 0 $color-yellow-700;
+    box-shadow: 0 6px 0 0 $color-olive-700;
 
     transition-property: transform, box-shadow, filter;
     transition-duration: 0.15s;
@@ -33,14 +33,14 @@
         filter: brightness(1.1);
         transform: translateY(-2px);
         box-shadow:
-            0 8px 0 0 $color-yellow-700,
+            0 8px 0 0 $color-olive-700,
             0 10px 20px rgba($color-yellow-600, 0.45);
     }
 
     &:active {
         filter: brightness(0.95);
         transform: translateY(4px);
-        box-shadow: 0 2px 0 0 $color-yellow-700;
+        box-shadow: 0 2px 0 0 $color-olive-700;
     }
 }
 
