@@ -183,6 +183,37 @@
     }
 }
 
+.ingredient-card {
+    position: relative;
+    background-color: $color-neutral-900;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+    padding: 80px 24px 60px;
+    text-align: center;
+
+    &__img {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translate(-50%, -50%);
+        width: 6rem;
+        height: 6rem;
+    }
+
+    &__title {
+        color: $color-white;
+        font-weight: 500;
+        font-size: 1.5rem;
+        margin: 0 auto 0.75rem;
+    }
+
+    &__text {
+        color: $color-white;
+        font-size: 1rem;
+        margin: 0;
+    }
+}
+
 @media screen and (min-width: 1024px) {
     .buy-card {
         &--highlight {
@@ -224,8 +255,17 @@
             }
 
             &-img {
-            width: auto;
+                width: auto;
+            }
         }
+    }
+
+    .ingredient-card {
+        padding: 104px 40px 80px;
+
+        &__img {
+            width: auto;
+            height: auto;
         }
     }
 }
